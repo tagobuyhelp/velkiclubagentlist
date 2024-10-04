@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ভেল্কি ক্লাব এজেন্ট লিস্ট - Velki Club Agent List</title>
 </head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
     <div id="header">
         <header>
@@ -20,33 +20,80 @@
                         Home</a></li>
                     <li><a href="customer-service-list.html">
                         <img src="/public/images/help.png">
-                        Customer Service List</a></li>
+                        Customer Service</a></li>
                     <li><a href="old-new-list.html">
                         <img src="/public/images/configuration.png">
-                        Old-New List</a></li>
+                        Old/New</a></li>
                 </ul>
             </nav>
             <nav>
                 <ul>
                     <li><a href="site-admin-list.html">
                         <img src="/public/images/configuration.png">
-                        Site Admin List</a></li>
-                    <li><a href="sub-admin-list.html">
-                        <img src="/public/images/configuration.png">
-                        Sub Admin List</a></li>
+                        Admin</a></li>
                     <li><a href="super-agent-list.html">
                         <img src="/public/images/configuration.png">
-                        Super Agent List</a></li>
+                        Super</a></li>
                     <li><a href="master-agent-list.html">
                         <img src="/public/images/configuration.png">
-                        Master Agent List</a></li>
+                        Master</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     <main>
-        <h1>Welcome to Velki Club Agent List</h1>
-        <p>This is the main page where you can navigate to the agent lists.</p>
+        <div class="container">
+            <div class="title">
+                <img src="/public/images/Info.png">
+                <h1>QUICK MASTER AGENT NUMBER:</h1>
+            </div>
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <div class="content-box content-box-agent-info" id="agent-info-box">
+                    <div class="agent-info">
+                        <div>AGENT ID: <a href="" id="agent-url"><span id="agent-id"></span></a></div>
+                        <div class="whatsapp">
+                            <a href="" id="wp-link">
+                                <img src="/public/images/ws.png">
+                            </a>
+                            <a href="" id="phone-url">
+                                <span id="agent-phone"></span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <img src="/public/images/Info.png">
+                <h1>কিভাবে একাউন্ট খুলবেনঃ</h1>
+            </div>
+            <div class="content-box">
+                <h1>ভেল্কি তে একাউন্ট করতে হলে আপনার এজেন্ট এর মাধ্যমে একাউন্ট খুলতে হবে। এজেন্ট এর মাধ্যমেই টাকা ডিপোজিট এবং উইথড্র করতে হবে। আপনি যে এজেন্ট এর কাছ থেকে একাউন্ট খুলবেন তার সাথেই সব সময় লেনদেন করতে হবে। ঠিক কোন এজেন্ট কে টাকা দিবেন এবং কিভাবে তার সাথে লেনদেন করবেন তার বুঝতে হলে আপনার নিম্বের তথ্য গুলো পড়া জরুরী।</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <img src="/public/images/Info.png">
+                <h1>এজেন্ট লিস্টঃ</h1>
+            </div>
+            <div class="content-box">
+                <h1>একাউন্ট খুলতে নিম্বের অনলাইন এজেন্ট লিস্ট এ ক্লিক করুন। এজেন্ট লিষ্ট এর এজেন্ট দের সাথে ইউজার দের শুধু মাত্র হোয়াটসাপ এর মাধ্যমে যোগাযোগ করতে হবে। হোয়াটসাপ ছাড়া অন্য কোন মাধ্যমে যোগাযোগ করলে বা লেনদেন করলে তা গ্রহনযোগ্য হবে না। হোয়াটসাপ এ যোগাযোগ করতে হলে এজেন্ট লিস্টে হোয়াটসাপ আইকন উপরে ক্লিক করুন অথবা ফোন নাম্বার টি মোবাইলে সেভ করে তাকে হোয়াটসাপ এ মসেজ পাঠাতে পারবেন। হোয়াটসাপ এপ টি আপনার মোবাইলে আগে থেকেই থাকতে হবে। না থাকলে গুগুল প্লে থেকে ইন্সটল করে নিন।
+                    <br> <a href="master-agent-list.html" class="link">অনলাইন মাষ্টার এজেন্ট লিস্টঃ</a></h1>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 60px;">
+            <div class="title">
+                <img src="/public/images/Info.png">
+                <h1>এজেন্ট কয় প্রকারঃ</h1>
+            </div>
+            <div class="content-box">
+                <h1><a href="super-agent-list.html" class="link">অনলাইন সুপার এজেন্ট লিস্টঃ</a> সুপার এজেন্ট রা, ইউজার একাউন্ট এবং মাষ্টার এজেন্ট একাউন্ট খুলে দিতে পারেন। কোন সুপার এজেন্ট এর নামে অভিযোগ থাকলে - সরাসরি এডমিন কে জানাতে হবে। উপরে মেনু তে এডমিন লিষ্ট দেয়া আছে।
+                    <a href="master-agent-list.html" class="link">অনলাইন মাষ্টার এজেন্ট লিস্টঃ</a> অনলাইন মাষ্টার এজেন্ট রা, শুধু ইউজার একাউন্ট একাউন্ট খুলে দিতে পারেন। কোন মাষ্টার এজেন্ট এর নামে অভিযোগ থাকলে - সরাসরি সুপার এজেন্ট এর কাছে অভিযোগ করতে হবে। বিস্তারিত জানতে এই লিঙ্ক এ ক্লিক করুন।
+                    লোকাল মাষ্টার এজেন্ট লিস্টঃ লোকাল মাষ্টার এজেন্ট রা, শুধু ইউজার একাউন্ট একাউন্ট খুলে দিতে পারেন। কিন্তু তাদের সাথে লেনদেন প্রতিটি ইউজার কে নিজ দায়িত্বে লেনদেন করতে হবে। তাদের নামে কোন অভিযোগ কারো কাছে করা যাবে না।
+            </div>
+        </div >
     </main>
     <div id="footer"></div>
 </body>

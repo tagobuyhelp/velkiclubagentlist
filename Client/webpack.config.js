@@ -4,6 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+
+const API_URL = 'http://localhost:5000';
+
 
 module.exports = {
     entry: {
@@ -161,7 +167,9 @@ module.exports = {
             template: './src/guest/pages/phone-number-search.html',
             chunks: ['global']
         }),
-
+        new webpack.DefinePlugin({
+            'process.env.API_HOST': JSON.stringify(process.env.API_HOST),
+        }),
         // Image Minimizer Plugin
         new ImageMinimizerPlugin({
             minimizer: {
@@ -203,6 +211,14 @@ module.exports = {
         compress: true,
         port: 9000,
         open: true,
+        proxy: [
+            {
+                context: ['/api'],
+                target: API_URL,
+                changeOrigin: true,
+                pathRewrite: { '^/api': '' },
+            }
+        ]
     },
     mode: 'development',
 };

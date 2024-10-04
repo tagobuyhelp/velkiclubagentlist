@@ -139,6 +139,19 @@ const getAllUplinesWithSuperAgentsAndMasterAgents = asyncHandler(async (req, res
     }
 });
 
+//get random master agent 
+const randomMasterAgent = asyncHandler(async (req, res) => {
+    const randomMasterAgent = await MasterAgent.aggregate([
+        { $sample: { size: 1 } }
+    ]);
+
+    if (randomMasterAgent.length > 0) {
+        res.status(200).json(randomMasterAgent[0]);
+    } else {
+        res.status(404).json({ message: "No master agent found" });
+    }
+});
+
 
 
 export {
@@ -148,4 +161,5 @@ export {
     updateMasterAgent,
     deleteMasterAgent,
     getAllUplinesWithSuperAgentsAndMasterAgents,
+    randomMasterAgent,
 };
