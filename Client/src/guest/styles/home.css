@@ -1,112 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
 body {
-    font-family: 'Noto Serif Bengali', sans-serif;
-    margin: 0;
-    padding: 0;
-  
-  }
-  
-  header {
-    width: 100%;
-  }
-  
-  header nav ul {
-    list-style: none;
-  }
-  
-  header nav ul li {
-    margin-right: 1rem;
-  }
-  
-  header nav ul li a {
-    color: #161616;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+  font-family: Noto Serif Bengali !important;
+  margin: 0;
+  padding: 0;
+}
 
-  .top-bar-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    background-color: #F8F8F8;
-  }
+header {
+  width: 100%;
+}
 
-  .top-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 48px;
-    width: 1500px;
-    font-size: 12px;
-    text-decoration: none;
-    color: #111111;
-    font-weight: 700;
-    font-family: "Roboto Condensed", Arial;
-  }
+header nav ul {
+  list-style: none;
+}
 
-  .top-bar a {
-    text-decoration: none;
-    font-family: "Roboto Condensed", Arial;
-    color: #111111;
-    font-weight: 700;
-    font-size: 12px;
-  }
+header nav ul li a {
+  color: #161616;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
-  .top-bar .csl {
-    color: #cc0000 !important;
-    font-weight: 500;
-    font-size: 14px;
-  }
+.top-bar-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
 
-  .logo-area-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    box-sizing: border-box;
-  }
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 1349px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #111111;
+  font-weight: 700;
+  font-family: Noto Serif Bengali;
+}
 
-  .logo-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 152px;
-    width: 1349px;
-    box-sizing: border-box;
-    padding: 24px 0 24px 0px;
-  }
+.top-bar a {
+  text-decoration: none;
+  font-family: Noto Serif Bengali;
+  color: #111111;
+  font-weight: 700;
+  font-size: 12px;
+}
 
-  .date-container {
-    width: 100px;
-    height: 100px;
-    background-color: #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+.top-bar .csl {
+  color: #cc0000 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.logo-area-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 152px;
+  width: 1180px;
+  box-sizing: border-box;
+  padding: 24px 0 24px 0px;
+}
+
+.date-container {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 .date-container .day {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000000;
-    margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
 }
 .date-container .weekday-month {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .date-container .weekday,
 .date-container .month {
-    font-size: 14px;
-    color: #757575;
-    margin: 0 5px;
+  font-size: 14px;
+  color: #757575;
+  margin: 0 5px;
 }
 
 /* Navigation Bar */
@@ -132,10 +129,12 @@ body {
 .nav-div {
   display: flex;
   border-top: solid 2px #cc0000;
-  border-bottom: solid 1px #c9c6c6;
+  border-bottom: solid 1px #e5e5e5;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-bar {
@@ -143,8 +142,10 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1349px;
+  max-width: 1180px;
   height: 51px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Main navigation items */
@@ -157,10 +158,16 @@ nav ul {
 
 nav ul li {
   position: relative;
-  margin-right: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul > li > a { /* Ensure this targets only main menu items */
+nav ul:last-child {
+  border-right: solid 1px #e5e5e5;
+}
+
+nav ul > li > a {
+  /* Ensure this targets only main menu items */
   color: #161616;
   font-size: 18px;
   font-weight: 700;
@@ -168,6 +175,7 @@ nav ul > li > a { /* Ensure this targets only main menu items */
   text-decoration: none;
   display: block;
   padding: 12px 20px;
+  border-left: solid 1px #e5e5e5;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -192,7 +200,8 @@ nav ul li ul li {
   margin: 0;
 }
 
-nav ul li ul li a { /* Submenu item styles */
+nav ul li ul li a {
+  /* Submenu item styles */
   font-size: 14px;
   font-weight: 500;
   color: #333;
@@ -207,7 +216,13 @@ nav ul li:hover ul {
 }
 
 /* Main menu item hover effect */
-nav ul > li:hover > a { /* Target only main menu items hover */
+nav ul > li:hover > a {
+  /* Target only main menu items on hover */
+  background-color: #111111;
+  color: white;
+}
+
+.nav-link.visited {
   background-color: #111111;
   color: white;
 }
@@ -218,77 +233,65 @@ nav ul li ul li:hover a {
   color: black; /* Set submenu item text color to black on hover */
 }
 
+main {
+  padding: 2rem;
+}
 
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  main {
-    padding: 2rem;
-  }
+.mobile-header {
+  display: none;
+}
 
-  .mobile-header{
-    display: none;
-  }
-  
-  .sidebar {
-    display: none;
-    width: 250px;
-    height: 100vh;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-    color: #fff;
-    z-index: 9000;
+.sidebar {
+  display: none;
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  color: #fff;
+  z-index: 9000;
 }
 .sidebar-header {
-    padding: 20px;
-    border-bottom: solid 3px #333;
-    text-align: start;
-    font-size: 14px;
-    font-weight: bold;
+  padding: 20px;
+  border-bottom: solid 3px #333;
+  text-align: start;
+  font-size: 14px;
+  font-weight: bold;
 }
 .sidebar-header .close-btn {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
 }
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .sidebar ul li {
-    padding: 0;
-    border-bottom: 1px solid #444;
-    background-color: #111111;
+  padding: 0;
+  border-bottom: 1px solid #444;
+  background-color: #111111;
 }
 .sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
 }
 .sidebar ul li a:hover {
-    background-color: #444;
+  background-color: #444;
 }
 .sidebar ul li a.active {
-    background-color: #c00;
+  background-color: #c00;
 }
 .sidebar ul li a .fa {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .sidebar ul li a .new {
-    color: #c00;
+  color: #c00;
 }
 
 .sidebar .sub-menu {
@@ -298,37 +301,970 @@ nav ul li ul li:hover a {
 .sidebar .head-menu {
   background-color: #000;
 }
-  
+.caret {
+  border-top-color: #333333;
+  border-bottom-color: #333333;
+  margin-left: 5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  border-width: 6px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
 
-  @media (max-width: 768px) {
+/*-----------Footer CSS Start Her-------*/
+/* Main Footer Styling */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
 
-    header{
-      display: none;
-    }
-    .mobile-header{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 53px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border-bottom: solid 3px #cc0000;
-    }
+footer > div {
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  width: 1180px;
+  height: 240px;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 48px 20px;
+}
 
-    .mobile-logo {
-      margin-left: 20px;
-    }
-    .mobile-logo img {
-      width: 80px;
-      height: 26.28px;
-    }
-    .customer-service a {
-      text-decoration: none;
-      color: #cc0000;
-    }
-    #openMenu{
-      background-color: white;
-      border: solid 0px;
+footer > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  padding: 24px 60px 24px 40px;
+  margin-left: -40px;
+}
+
+/* Logo Container with Pseudo-elements */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-container:before {
+  border-right: 20px solid #cc0000;
+  border-top: 20px solid transparent;
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -44px;
+}
+
+.logo-container:after {
+  border-right: 20px solid #111111;
+  border-top: 20px solid transparent;
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -24px;
+}
+
+/* Logo Image Styling */
+.footer-logo img {
+  width: 290px;
+  height: 96px;
+  max-width: 100%;
+}
+
+/* Main CSS Start here */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  padding: 10px 0px 10px 0px;
+}
+
+main section {
+  display: flex;
+  border: solid 1px #e5e5e5;
+  width: 1180px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.div-left{
+  width: 786px;
+  box-sizing: border-box;
+}
+
+
+.div-right {
+  width: 393px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.agent {
+  background: #fff;
+  border: 1px solid #666666;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 3px 6px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.spotlight-heading {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.235);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 20px;
+}
+
+.news-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  padding: 0px 20px;
+  background-color: #F2F2F2;
+  font-size: 14px;
+  color: #333333;
+}
+
+.grid > .card > img {
+  height: 83px;
+  width: 221px;
+}
+
+.list img {
+  height: 21.5px;
+  width: 57.54px;
+}
+
+.featured-image {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 278px;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+.hero {
+  padding: 24px;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.hero h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.hero h1:hover {
+  color: #c00;
+}
+
+.hero h2 {
+  margin-top: 12px;
+  font-family: Noto Serif Bengali;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 30.85px;
+  color: #cc0000;
+}
+
+.hero h2:hover {
+  text-decoration: underline;
+}
+
+
+.btn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border: solid 1px #999999;
+  color: #333333;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+
+.btn:hover {
+  background-color: #d9d9d9;
+}
+
+.agent:hover {
+  background-color: red;
+  color: white;  
+  border: solid 0px;
+}
+
+
+
+.grid {
+  display: flex;
+  box-sizing: border-box;
+  width: 65%;
+}
+
+.grid .card {
+  padding: 24px 20px;
+  border: solid 1px #e5e5e5;
+  gap: 30px
+}
+
+.card h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+
+.card h1:hover, .item h1:hover {
+  color: #c00;
+}
+
+.list .item {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 24px;
+  gap: 20px;
+  border-bottom: solid 1px #e5e5e5;
+  align-items: center;
+}
+
+.item h1 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.item > div > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  height: 18px;
+  align-items: center;
+}
+
+.publish-date {
+  font-size: 11px;
+  color: #999999;
+  text-transform: uppercase;
+}
+
+
+
+/*Random Master Agent CSS Start Here */
+.section-2 {
+  flex-direction: column;
+}
+
+.heading {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: row;
+  font-weight: 700;
+  text-transform: uppercase;
+  justify-content: space-between;
+  font-family: Arial;
+  font-size: 21px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+
+.view-toggle {
+  display: flex;
+  border: 1px solid #ccc;
+}
+.view-toggle input[type="radio"] {
+  display: none;
+}
+.view-toggle label {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.view-toggle .grid-label {
+  background-color: white;
+  color: black;
+}
+.view-toggle .list-label {
+  background-color: white;
+  color: black;
+}
+.view-toggle .grid-label i, .view-toggle .list-label i {
+  margin-right: 10px;
+}
+.view-toggle input[type="radio"]#grid:checked + label.grid-label {
+  background-color: #CC0000;
+  color: white;
+}
+.view-toggle input[type="radio"]#list:checked + label.list-label {
+  background-color: #CC0000;
+  color: white;
+}
+
+.faq-toggle {
+  display: flex;
+  border: 1px solid #ccc;
+}
+.faq-toggle input[type="radio"] {
+  display: none;
+}
+.faq-toggle label {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.faq-toggle .detailed-label {
+  background-color: white;
+  color: black;
+}
+.faq-toggle .compact-label {
+  background-color: white;
+  color: black;
+}
+.faq-toggle .detailed-label i, .faq-toggle .compact-label i {
+  margin-right: 10px;
+}
+.faq-toggle input[type="radio"]#detailed:checked + label.detailed-label {
+  background-color: #CC0000;
+  color: white;
+}
+.faq-toggle input[type="radio"]#compact:checked + label.compact-label {
+  background-color: #CC0000;
+  color: white;
+}
+
+
+
+
+.container {
+            width: 100%;
+            background: url('https://placehold.co/1000x100/eeeeee/eeeeee.png?text=') repeat;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: start;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #c00;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #a00;
+        }
+        .button i {
+            margin-left: 5px;
+        }
+
+.grid-list {
+  display: flex;
+  flex-direction: row;
+}
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+    .image-box img {
+      height: 77.14px;
+      width: 254px;
     }
     
+
+    .content-box h1 {
+      font-size: 16px;
+      color:#111111;
+      font-weight: 700;
+    }
+    .content-box h2 {
+      font-size: 15px;
+      color:#111111;
+      font-weight: 700;
+    }
+    .agent-id {
+      font-size: 16px;
+      color:#111111;
+      font-weight: 700;
+    }
+
+    .agent-number a{
+      font-size: 15px;
+      color:#cc0000;
+      font-weight: 700;
+    }
+
+    .grid-view {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 20px;
   }
+  
+  .grid-view .image-box img {
+      height: 77.14px;
+      width: 254px;
+  }
+  
+  .grid-view .content-box h1 {
+      font-size: 16px;
+      color: #111111;
+      font-weight: 700;
+  }
+  
+  .grid-view .content-box h2 {
+      font-size: 15px;
+      color: #111111;
+      font-weight: 700;
+  }
+  
+  .grid-view .agent-id {
+      font-size: 16px;
+      color: #111111;
+      font-weight: 700;
+  }
+  
+  .grid-view .agent-number a {
+      font-size: 15px;
+      color: #cc0000;
+      font-weight: 700;
+  }
+
+  
+  .grid-view .card-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+}
+
+.grid-view .image-box img {
+    height: 77.14px;
+    width: 254px;
+}
+
+.grid-view .content-box h1 {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 700;
+}
+
+.grid-view .content-box h2 {
+    font-size: 15px;
+    color: #111111;
+    font-weight: 700;
+}
+
+.grid-view .agent-id {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 700;
+}
+
+.grid-view .agent-number a {
+    font-size: 15px;
+    color: #cc0000;
+    font-weight: 700;
+}
+
+
+.list-view {
+  display: flex;
+  flex-direction: row !important;
+  padding: 24px 20px;
+}
+
+.list-view .content-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.list-view .image-box {
+  height: 133px;
+  width: 380px;
+}
+
+.list-view .image-box img {
+  height: 109px;
+  width: 360px;
+}
+
+.list-view .content-box h1 {
+  font-size: 21px;
+  color: #111111;
+  font-weight: 700;
+  padding: 0 0 0 20px;
+}
+
+.list-view .content-box h2 {
+  font-size: 15px;
+  color: #111111;
+  font-weight: 700;
+  text-align: center;
+}
+
+.list-view .agent-number a {
+  font-size: 15px;
+  color: #cc0000;
+  font-weight: 700;
+}
+
+/*FAQ CSS START HERE..........*/
+
+.feature-faq {
+  padding: 24px 24px;
+}
+
+.feature-faq img {
+  width: 1132px;
+  height: 200px;
+}
+
+.feature-faq h1:hover {
+  color: #CC0000;
+}
+
+
+
+
+h1, h2, a {
+  color: #111111;
+}
+
+.faq-content-box h2 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.faq-content-box h2:hover {
+  color: #cc0000;
+}
+
+.faq {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 24px;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.faq-image-box img {
+  height: 70px;
+  width: 188px;
+}
+
+.faq-content-box {
+  padding-left: 24px;
+}
+
+/*ProxyLink Page CSS Start Here*/
+.porxy-section .proxy{
+  display: flex;
+  flex-direction: row;
+}
+
+.proxy .div-left {
+  padding: 24px 20px;
+  width: 885px;
+}
+
+.proxy .div-left .title h1{
+  font-size: 45px;
+  line-height: 56px;
+}
+
+.proxy .div-left img {
+  height: 316px;
+  width: 845px;
+}
+
+.proxy-link-box {
+  border-left: solid 5px #e5e5e5;
+  padding: 0px 24px 0px 24px;
+}
+
+.proxy-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  font-size: 24px;
+  padding: 24px;
+  gap: 0;   
+}
+
+.proxy-links a {
+  margin: 0;
+  padding: 0;
+}
+
+
+.downloadlink {
+  padding: 24px;
+  border-top: solid 1px #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 15px;
+}
+
+.proxy .div-right {
+  width: 295px;
+}
+
+.div-right .feature-image {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 20px;
+  background-color: #f8f8f8;
+  border: solid 1px #e5e5e5;
+  box-sizing: border-box;
+}
+
+.div-right .feature-image img {
+  height: 186px;
+  width: 250px;
+}
+
+.proxy-link-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.proxy-link {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #cc0000
+}
+.proxy-link:hover {
+  text-decoration: underline;
+  color: #cc0000
+}
+
+.downloadlink h1{
+  text-align: center;
+}
+
+.downloadlink a { 
+  font-size: 24px;
+  color: #cc0000;
+  text-align: center;
+}
+.downloadlink a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*How To Account Page CSS Start Here*/
+.open-account {
+  padding: 24px 20px;
+}
+
+.open-account .title {
+  font-size: 45px;
+  line-height: 2.5px !important;
+}
+
+.open-account div img {
+  height: 427px;
+  width: 1140px;
+}
+
+.summary-box {
+  padding: 0px 24px;
+  border-left: 5px solid #e5e5e5
+}
+
+.open-account-content-box a {
+  color: #cc0000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.open-account-content-box a:hover {
+  text-decoration: underline;
+}
+
+/*OLD-NEW PAGE CSS START HERE*/
+.table-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #e5e5e5;
+  padding: 4px;
+  text-align: center;
+  font-weight: 700;
+}
+
+td {
+  border-left: inset 1px #808080;
+  border-right: inset 1px #808080;
+  border-bottom: inset 1px #808080;
+  border-top: 1px solid #e5e5e5;
+  color: #333333;
+}
+
+th {
+  background-color: #f2dede;
+  color: #333333;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.new-number {
+  color: #cc0000;
+}
+
+.old-number {
+  text-decoration: line-through;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 53px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: solid 3px #cc0000;
+  }
+
+  .mobile-logo {
+    margin-left: 20px;
+  }
+  .mobile-logo img {
+    width: 80px;
+    height: 26.28px;
+    margin-left: -90px;
+  }
+  .customer-service a {
+    text-decoration: none;
+    color: #cc0000;
+  }
+  #openMenu {
+    background-color: white;
+    border: solid 0px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 5px;
+    border-right: solid 1px #e0e0e0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  footer > div {
+    width: 100%;
+    height: 70px;
+  }
+
+  footer > div > div {
+    display: none;
+  }
+
+  .footer-logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  main section {
+    flex-direction: column;
+    border: solid 1px #e5e5e5;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 13px;
+  }
+  .div-left{
+    width: 100%;
+  }
+
+  
+  .div-right {
+    width: 100%;
+  }
+
+  .grid {
+    flex-direction: column;
+    width: 100%;
+  }
+  .grid > .card > img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 18px;;
+  }
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .card h1 {
+    font-size: 16px;
+  }
+  .news-heading {
+    justify-content: center;
+  }
+  .news-heading p {
+    text-align: center;
+  }
+  .featured-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .grid-list {
+    flex-direction: column;
+  }
+  .view-toggle {
+    display: none;
+  }
+
+  .card-item {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .image-box img {
+    height: auto;
+    width: 100%;
+  }
+  .content-box h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .feature-faq img {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .faq-image-box img {
+    height: 30px;
+    width: 80px;
+  }
+  .faq-toggle {
+    display: none;
+  }
+
+  /*ProxyLink Page Mobile CSS Start Here*/
+  .porxy-section .proxy{
+    display: flex;
+    flex-direction: column;
+  }
+  .proxy .div-left {
+    width: 100%;
+    max-width: 100%;
+}
+  .proxy .div-left img {
+    height: 139px;
+    width: 372px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .open-account div img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  .title h1 {
+    font-size: 36px;
+    line-height: 36px
+  }
+  th, td {
+    font-size: 14px;
+  }
+}

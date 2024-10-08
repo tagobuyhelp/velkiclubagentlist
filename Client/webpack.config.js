@@ -206,11 +206,16 @@ module.exports = {
             new CssMinimizerPlugin(), // Minify CSS
         ],
     },
+    cache: {
+        type: 'filesystem', // This allows Webpack to cache build results on disk between builds
+    },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
-        compress: true,
         port: 9000,
         open: true,
+        compress: false, // Disable compression for faster builds
+        hot: true, // Enable Hot Module Replacement
+        liveReload: true, // Enables automatic browser refresh when files change
         proxy: [
             {
                 context: ['/api'],
@@ -218,7 +223,9 @@ module.exports = {
                 changeOrigin: true,
                 pathRewrite: { '^/api': '' },
             }
-        ]
+        ],
     },
     mode: 'development',
+    // Enable source maps for better debugging in development
+    devtool: 'eval-source-map',
 };
