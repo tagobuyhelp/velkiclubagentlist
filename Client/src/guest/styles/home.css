@@ -1083,14 +1083,15 @@ td {
 }
 
 th {
-  background-color: #f2dede;
+  background-color: white;
   color: #333333;
 }
 tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 tr:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
+  
 }
 .new-number {
   color: #cc0000;

@@ -2,37 +2,52 @@ import './home';
 import '../styles/old-new-list.css';
 
 
-const data = [
-    { oldId: 1643, newId: '---', oldNumber: '+855967045206', newNumber: '+855967289575' },
-    { oldId: 2645, newId: '---', oldNumber: '+85515920557', newNumber: '+85570550371' },
-    { oldId: 762, newId: '---', oldNumber: '+85570564955', newNumber: '+85570550371' },
-    { oldId: 248, newId: '---', oldNumber: '+85586952208', newNumber: '+60172774046' },
-    { oldId: 298, newId: '---', oldNumber: '+855962975689', newNumber: '+85570550371' },
-    { oldId: 2418, newId: '---', oldNumber: '+85570550387', newNumber: '+855967289983' }
-];
+document.addEventListener('DOMContentLoaded', async function () {
+    const tableBody = document.querySelector('#old-new tbody');
 
-const tableBody = document.querySelector('#old-new tbody');
+    try {
+        // Fetch data from the API
+        const response = await fetch('/api/oldnew');
+        const result = await response.json();
+        console.log(result);
 
-data.forEach(item => {
-    const row = document.createElement('tr');
+        if (result.statusCode === 200) {
+            result.data.forEach( agent => {
+                const { oldId, newId, oldNumber, newNumber } = agent;
 
-    const oldIdCell = document.createElement('td');
-    oldIdCell.textContent = item.oldId;
-    row.appendChild(oldIdCell);
+            // Create a new table row
+            const row = document.createElement('tr');
 
-    const newIdCell = document.createElement('td');
-    newIdCell.textContent = item.newId;
-    row.appendChild(newIdCell);
+            // Old ID cell
+            const oldIdCell = document.createElement('td');
+            oldIdCell.textContent = oldId;
+            row.appendChild(oldIdCell);
 
-    const oldNumberCell = document.createElement('td');
-    oldNumberCell.textContent = item.oldNumber;
-    oldNumberCell.classList.add('old-number');
-    row.appendChild(oldNumberCell);
+            // New ID cell
+            const newIdCell = document.createElement('td');
+            newIdCell.textContent = newId || '---'; // Default to '---' if no newId
+            row.appendChild(newIdCell);
 
-    const newNumberCell = document.createElement('td');
-    newNumberCell.textContent = item.newNumber;
-    newNumberCell.classList.add('new-number');
-    row.appendChild(newNumberCell);
+            // Old Number cell
+            const oldNumberCell = document.createElement('td');
+            oldNumberCell.textContent = oldNumber;
+            oldNumberCell.classList.add('old-number');
+            row.appendChild(oldNumberCell);
 
-    tableBody.appendChild(row);
+            // New Number cell
+            const newNumberCell = document.createElement('td');
+            newNumberCell.textContent = newNumber;
+            newNumberCell.classList.add('new-number');
+            row.appendChild(newNumberCell);
+            tableBody.appendChild(row);
+            })
+            
+            // Append the new row to the table body
+            
+        } else {
+            console.error('No data found or invalid response');
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
 });
