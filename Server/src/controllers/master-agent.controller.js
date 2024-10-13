@@ -4,6 +4,7 @@ import { SubAdmin } from '../models/sub-admin.model.js';
 import { ApiError } from '../utils/apiError.js';
 import { ApiResponse } from '../utils/apiResponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
+import { SiteAdmin } from '../models/site-admin.model.js';
 
 // Create MasterAgent
 const createMasterAgent = asyncHandler(async (req, res) => {
@@ -29,6 +30,7 @@ const createMasterAgent = asyncHandler(async (req, res) => {
 // Get All MasterAgents
 const getAllMasterAgents = asyncHandler(async (req, res) => {
     const masterAgents = await MasterAgent.find().populate('upline');
+
     return res.status(200).json(
         new ApiResponse(200, masterAgents, "MasterAgents retrieved successfully")
     );
@@ -38,13 +40,20 @@ const getAllMasterAgents = asyncHandler(async (req, res) => {
 const getMasterAgentById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const masterAgent = await MasterAgent.findById(id).populate('upline');
+    const masterAgent = await MasterAgent.findOne({id}).populate('upline');
     if (!masterAgent) {
         throw new ApiError(404, "MasterAgent not found");
     }
 
+    const superUplineId = masterAgent.upline._id;
+    const superUpline = await SuperAgent.findById(superUplineId).populate('upline');
+    const subAdminUplineid = superUpline.upline._id;
+    const subAdminUpline = await SubAdmin.findById(subAdminUplineid).populate('upline');
+    const siteAdminUplineid =  subAdminUpline.upline._id;
+    const siteAdminUpline = await SiteAdmin.findById(siteAdminUplineid);
+
     return res.status(200).json(
-        new ApiResponse(200, masterAgent, "MasterAgent retrieved successfully")
+        new ApiResponse(200, {masterAgent, superUpline, subAdminUpline, siteAdminUpline}, "MasterAgent retrieved successfully")
     );
 });
 

@@ -3,6 +3,8 @@ import { ApiError } from '../utils/apiError.js';
 import { ApiResponse } from '../utils/apiResponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { SubAdmin } from '../models/sub-admin.model.js';
+import { SiteAdmin } from '../models/site-admin.model.js';
+
 
 // Create SuperAgent
 const createSuperAgent = asyncHandler(async (req, res) => {
@@ -37,13 +39,17 @@ const getAllSuperAgents = asyncHandler(async (req, res) => {
 const getSuperAgentById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const superAgent = await SuperAgent.findById(id).populate('upline');
+    const superAgent = await SuperAgent.findOne({id}).populate('upline');
+    const subAdminId = superAgent.upline._id;
+    const subAdminUpline = await SubAdmin.findById(subAdminId).populate('upline');
+    const siteAdminId = subAdminUpline.upline._id;
+    const siteAdminUpline = await SiteAdmin.findById(siteAdminId)
     if (!superAgent) {
         throw new ApiError(404, "Super Agent not found");
     }
 
     return res.status(200).json(
-        new ApiResponse(200, superAgent, "Super Agent retrieved successfully")
+        new ApiResponse(200, {superAgent, subAdminUpline, siteAdminUpline}, "Super Agent retrieved successfully")
     );
 });
 

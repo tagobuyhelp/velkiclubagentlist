@@ -167,6 +167,16 @@ module.exports = {
             template: './src/guest/pages/phone-number-search.html',
             chunks: ['global']
         }),
+        new HtmlWebpackPlugin({
+            filename: 'velki-quick-master-agent.html',
+            template: './src/guest/pages/velki-quick-master-agent.html',
+            chunks: ['global']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'velki-faqs.html',
+            template: './src/guest/pages/velki-faqs.html',
+            chunks: ['global']
+        }),
         new webpack.DefinePlugin({
             'process.env.API_HOST': JSON.stringify(process.env.API_HOST),
         }),

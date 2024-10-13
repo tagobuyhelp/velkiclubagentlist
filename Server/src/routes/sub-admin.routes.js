@@ -15,7 +15,7 @@ const router = Router();
 router.post('/subadmin', verifyJWT, createSubAdmin);
 router.get('/subadmin', getAllSubAdmins);
 router.get('/subadmin/uplines', getAllUplinesWithSubAdmins);
-router.get('/subadmin/:id', getSubAdminById);
+router.get('/subadminbyid/:id', getSubAdminById);
 router.put('/subadmin/:id', verifyJWT, updateSubAdmin);
 router.delete('/subadmin/:id', verifyJWT, deleteSubAdmin);
 

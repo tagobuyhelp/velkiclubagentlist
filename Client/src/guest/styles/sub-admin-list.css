@@ -1,3 +1,33 @@
-th {
-    background-color: aliceblue;
+.complain, phone-number, a {
+    color: #cc0000;
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.complain:hover, phone-number:hover, a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    font-size: 21px;
+    color: #333333;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container-column .agent {
+    margin-bottom: -39px;
+    z-index: 2;
+}
+
+
+
+@media (max-width: 768px) {
+    th {
+        font-size: 14px;
+    }
+    td {
+        font-size: 15px;
+    }
 }

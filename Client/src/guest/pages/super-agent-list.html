@@ -10,8 +10,39 @@
 <body>
     <div id="header"></div>
     <main>
-        <h1>Super Agent List</h1>
-        <p>List of all Super Agents.</p>
+        <section class="container-column">
+            <div class="id-search-box">
+                <h2>এজেন্ট এর আইডি নাম্বার দিয়ে খুঁজুন:</h2>
+                <div class="form-group">
+                    <label for="agent-type">Agent Type:</label>
+                    <select id="agent-type">
+                        <option value="master-agent">মাস্টার এজেন্ট</option>
+                        <option value="super-agent">সুপার এজেন্ট</option>
+                        <option value="sub-admin">সাব এডমিন</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="agent-id">Agent ID:</label>
+                    <input type="text" id="agent-id">
+                </div>
+                <button class="btn-submit">Submit</button>
+            </div>
+            <div id="content"></div>
+            <a href class="agent">AGENT</a>
+            <img src="/public/images/super.jpg">
+            
+            <div class="content-box">
+                <h1>এজেন্ট দের সাথে লেনদেন এর আগে ভেল্কির নিয়ম গুলো জেনে নিন!!</h1>
+                <p>**প্রতারনার হাত থেকে বাচতে সবার আগে ভিজিট করুন ভেল্কি সাইটঃ VELKI.COM **হোয়াটসঅ্যাপ ব্যাতিত অন্য কোন
+                    এপ এর মাধ্যমে যোগাযোগ বা লেনদেন করা যাবে না এবং করলে তা গ্রহনযোগ্য হবে না।</p>
+            </div>
+            <div class="table-box" id="table-box">
+                <h1 class="table-title">
+                    VELKI SUPER AGENT LIST
+                </h1>
+                
+            </div>
+        </section>
     </main>
     <div id="footer"></div>
 </body>

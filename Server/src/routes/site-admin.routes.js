@@ -12,8 +12,8 @@ const router = Router();
 
 // Routes with JWT verification
 router.post('/siteadmin', verifyJWT, createSiteAdmin);
-router.get('/siteadmin', verifyJWT, getAllSiteAdmins);
-router.get('/siteadmin/:id', verifyJWT, getSiteAdminById);
+router.get('/siteadmin',  getAllSiteAdmins);
+router.get('/siteadmin/:id', getSiteAdminById);
 router.put('/siteadmin/:id', verifyJWT, updateSiteAdmin);
 router.delete('/siteadmin/:id', verifyJWT, deleteSiteAdmin);
 

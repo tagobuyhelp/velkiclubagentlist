@@ -10,8 +10,26 @@
 <body>
     <div id="header"></div> <!-- Header will be injected by JavaScript -->
     <main>
-        <h1>Welcome to Velki Club Agent List</h1>
-        <p>This is the main page where you can navigate to the agent lists.</p>
+        <section class="container-column">
+            <div class="id-search-box">
+                <h2>এজেন্ট এর আইডি নাম্বার দিয়ে খুঁজুন:</h2>
+                <div class="form-group">
+                    <label for="agent-type">Agent Type:</label>
+                    <select id="agent-type">
+                        <option value="master-agent">মাস্টার এজেন্ট</option>
+                        <option value="super-agent">সুপার এজেন্ট</option>
+                        <option value="sub-admin">সাব এডমিন</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="agent-id">Agent ID:</label>
+                    <input type="text" id="agent-id">
+                </div>
+                <button class="btn-submit">Submit</button>
+            </div>
+            <div id="content"></div>
+
+        </section>
     </main>
     <div id="footer"></div> <!-- Footer will be injected by JavaScript -->
 </body>
