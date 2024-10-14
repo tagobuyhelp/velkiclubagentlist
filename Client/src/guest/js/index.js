@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
-    fetch('/api/randommasteragent')
+    fetch('https://server.velkiclubagentlist.com/randommasteragent')
     .then(response => response.json())
     .then(data => {
         agentId.innerHTML = data.id;

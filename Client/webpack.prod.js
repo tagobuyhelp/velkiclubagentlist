@@ -1,16 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const webpack = require('webpack');
 
-
-
-
-
 module.exports = {
+    mode: 'production',
     entry: {
         global: './src/guest/js/home.js',
         adminglobal: './src/admin/js/index.js',
@@ -32,19 +29,15 @@ module.exports = {
         'login': './src/admin/auth/login.js',
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[contenthash].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
     module: {
         rules: [
             {
-                test: /\.html$/,
-                use: ['html-loader'],
-            },
-            {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'], // Ensure this is set up correctly
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -54,11 +47,11 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name].[contenthash].css',
         }),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
             template: './src/guest/pages/index.html',
+            filename: 'index.html',
             chunks: ['index'],
         }),
         new HtmlWebpackPlugin({
@@ -176,7 +169,6 @@ module.exports = {
             template: './src/guest/pages/velki-faqs.html',
             chunks: ['global']
         }),
-        // Image Minimizer Plugin
         new ImageMinimizerPlugin({
             minimizer: {
                 implementation: ImageMinimizerPlugin.imageminMinify,
@@ -187,10 +179,7 @@ module.exports = {
                         ['imagemin-optipng', { optimizationLevel: 5 }],
                         ['imagemin-svgo', {
                             plugins: [
-                                {
-                                    name: 'removeViewBox',
-                                    active: false,
-                                },
+                                { name: 'removeViewBox', active: false },
                             ],
                         }],
                     ],
@@ -198,40 +187,21 @@ module.exports = {
             },
         }),
     ],
-
     optimization: {
         minimize: true,
         minimizer: [
             new TerserPlugin({
                 terserOptions: {
                     compress: {
-                        drop_console: true, // Remove console logs
+                        drop_console: true, // Remove console.logs in production
                     },
                 },
             }),
-            new CssMinimizerPlugin(), // Minify CSS
+            new CssMinimizerPlugin(), // Minifies CSS
         ],
+        splitChunks: {
+            chunks: 'all', // Code splitting for optimization
+        },
     },
-    cache: {
-        type: 'filesystem', // This allows Webpack to cache build results on disk between builds
-    },
-    devServer: {
-        static: path.resolve(__dirname, 'dist'),
-        port: 9000,
-        open: true,
-        compress: false, // Disable compression for faster builds
-        hot: true, // Enable Hot Module Replacement
-        liveReload: true, // Enables automatic browser refresh when files change
-        proxy: [
-            {
-                context: ['/api'],
-                target: 'https://server.velkiclubagentlist.com',
-                changeOrigin: true,
-                pathRewrite: { '^/api': '' },
-            }
-        ],
-    },
-    mode: 'development',
-    // Enable source maps for better debugging in development
-    devtool: 'eval-source-map',
+    devtool: 'source-map', // Use source-maps in production for better debugging
 };

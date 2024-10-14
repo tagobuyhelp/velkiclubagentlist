@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack serve"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
