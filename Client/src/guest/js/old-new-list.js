@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     try {
         // Fetch data from the API
-        const response = await fetch('/api/oldnew');
+        const response = await fetch('https://server.velkiclubagentlist.com/oldnew');
         const result = await response.json();
         console.log(result);
 

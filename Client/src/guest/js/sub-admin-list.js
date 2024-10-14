@@ -7,7 +7,7 @@ import halalWhatsapp from '/public/images/halal-whatsapp.png';
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchSubAdmins() {
         try {
-            const response = await fetch('/api/subadmin/uplines');
+            const response = await fetch('https://server.velkiclubagentlist.com/subadmin/uplines');
             const data = await response.json();
 
             if (data.success) {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(clickedId);
 
             try {
-                const response = await fetch(`/api/subadminbyid/${clickedId}`);
+                const response = await fetch(`https://server.velkiclubagentlist.com/subadminbyid/${clickedId}`);
                 const result = await response.json();
 
                 if (result.success) {

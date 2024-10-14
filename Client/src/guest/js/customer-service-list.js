@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const tbody = document.querySelector('tbody'); // Assuming there's only one <tbody> element
 
     try {
-        const response = await fetch(`/api/customerservice`);
+        const response = await fetch(`https://server.velkiclubagentlist.com/customerservice`);
         const result = await response.json();
 
         if (result.statusCode === 200 && result.data.length > 0) {

@@ -5,7 +5,7 @@ import halalWhatsapp from '/public/images/halal-whatsapp.png';
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchSuperAgents() {
         try {
-            const response = await fetch('/api/masteragent/uplines');
+            const response = await fetch('https://server.velkiclubagentlist.com/masteragent/uplines');
             const data = await response.json();
 
             if (data.statusCode === 200) {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(clickedId);
 
             try {
-                const response = await fetch(`/api/masteragent/${clickedId}`);
+                const response = await fetch(`https://server.velkiclubagentlist.com/masteragent/${clickedId}`);
                 const result = await response.json();
 
                 if (result.success) {

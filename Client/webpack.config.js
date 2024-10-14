@@ -224,7 +224,7 @@ module.exports = {
         liveReload: true, // Enables automatic browser refresh when files change
         proxy: [
             {
-                context: ['/api'],
+                context: ['https://server.velkiclubagentlist.com'],
                 target: 'https://server.velkiclubagentlist.com',
                 changeOrigin: true,
                 pathRewrite: { '^/api': '' },
