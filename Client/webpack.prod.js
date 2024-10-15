@@ -7,7 +7,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const Dotenv = require('dotenv-webpack');
 
+console.log('DOT ENV TEST',process.env.API_URL);
 
 module.exports = {
     entry: {
@@ -46,6 +48,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new Dotenv(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
         }),

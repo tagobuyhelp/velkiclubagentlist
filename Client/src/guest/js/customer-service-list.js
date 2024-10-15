@@ -2,12 +2,13 @@ import './home';
 import '../styles/customer-service-list.css';
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
 
+const api = process.env.API_URL;
 
 document.addEventListener('DOMContentLoaded', async function () {
     const tbody = document.querySelector('tbody'); // Assuming there's only one <tbody> element
 
     try {
-        const response = await fetch(`https://server.velkiclubagentlist.com/customerservice`);
+        const response = await fetch(`${api}/customerservice`);
         const result = await response.json();
 
         if (result.statusCode === 200 && result.data.length > 0) {

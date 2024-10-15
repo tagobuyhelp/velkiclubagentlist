@@ -5,10 +5,11 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
+console.log('DOT ENV TEST',process.env.API_URL);
 
-
-
+const api = process.env.API_URL;
 
 module.exports = {
     entry: {
@@ -56,6 +57,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
+        new Dotenv(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/guest/pages/index.html',
@@ -224,8 +226,8 @@ module.exports = {
         liveReload: true, // Enables automatic browser refresh when files change
         proxy: [
             {
-                context: ['https://server.velkiclubagentlist.com'],
-                target: 'https://server.velkiclubagentlist.com',
+                context: [`${api}`],
+                target: `${api}`,
                 changeOrigin: true,
                 pathRewrite: { '^/api': '' },
             }

@@ -2,10 +2,12 @@ import './home';
 import '../styles/super-agent-list.css';
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
 
+const api = process.env.API_URL;
+
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchSuperAgents() {
         try {
-            const response = await fetch('https://server.velkiclubagentlist.com/superagent/uplines');
+            const response = await fetch(`${api}/superagent/uplines`);
             const data = await response.json();
 
             if(data.statusCode === 200) {
@@ -144,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(clickedId);
 
             try {
-                const response = await fetch(`https://server.velkiclubagentlist.com/superagent/${clickedId}`);
+                const response = await fetch(`${api}/superagent/${clickedId}`);
                 const result = await response.json();
 
                 if (result.success) {

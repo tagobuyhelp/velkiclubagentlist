@@ -1,5 +1,7 @@
 import '../styles/home.css';  // Import global CSS
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
+import { inject } from '@vercel/analytics';
+inject();
 
 document.getElementById('header').innerHTML = require('../components/header.html').default;
 document.getElementById('footer').innerHTML = require('../components/footer.html').default;

@@ -1,6 +1,8 @@
 import '../styles/index.css'
-const { inject } = require('@vercel/analytics')
+import { inject } from '@vercel/analytics';
 inject();
+
+const api = process.env.API_URL;
 
 document.addEventListener('DOMContentLoaded', function () {
     let agentId = document.getElementById('agent-id');
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
-    fetch('https://server.velkiclubagentlist.com/randommasteragent')
+    fetch(`${api}/randommasteragent`)
     .then(response => response.json())
     .then(data => {
         agentId.innerHTML = data.id;
@@ -27,3 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 })
+

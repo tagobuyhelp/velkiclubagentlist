@@ -1,11 +1,12 @@
 import './home';
 import '../styles/site-admin-list.css';
 
+const api = process.env.API_URL;
 
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchData() {
         try {
-            const response = await fetch('https://server.velkiclubagentlist.com/siteadmin');
+            const response = await fetch(`${api}/siteadmin`);
             const result = await response.json();
 
             if (result.success) {

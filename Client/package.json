@@ -32,6 +32,7 @@
     "compression-webpack-plugin": "^11.1.0",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "dotenv": "^16.4.5",
+    "dotenv-webpack": "^8.1.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0"
   }
