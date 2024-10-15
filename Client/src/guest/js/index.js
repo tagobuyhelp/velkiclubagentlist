@@ -4,6 +4,8 @@ inject();
 
 const api = process.env.API_URL;
 
+console.log(process.env.API_URL);
+
 document.addEventListener('DOMContentLoaded', function () {
     let agentId = document.getElementById('agent-id');
     let agentUrl = document.getElementById('agent-url')
