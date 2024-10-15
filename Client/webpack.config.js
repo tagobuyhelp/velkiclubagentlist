@@ -7,7 +7,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 
-console.log('DOT ENV TEST',process.env.API_URL);
 
 const api = process.env.API_URL;
 
@@ -57,7 +56,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
-        new Dotenv(),
+        new Dotenv({
+            path: './.env',
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/guest/pages/index.html',
