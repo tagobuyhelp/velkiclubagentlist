@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             try {
-                const response = await fetch(`/api/${endPoint}/${inputAgentId}`);
+                const response = await fetch(`https://server.velkiclubagentlist.com/${endPoint}/${inputAgentId}`);
                 const result = await response.json();
 
                 if (result.success) {
