@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
 
 body {
-  font-family: Noto Serif Bengali !important;
+  font-family: 'Roboto', sans-serif !important;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 header {
@@ -41,12 +47,12 @@ header nav ul li a {
   text-decoration: none;
   color: #111111;
   font-weight: 700;
-  font-family: Noto Serif Bengali;
+  font-family: 'Roboto', sans-serif;
 }
 
 .top-bar a {
   text-decoration: none;
-  font-family: Noto Serif Bengali;
+  font-family: 'Roboto', sans-serif;
   color: #111111;
   font-weight: 700;
   font-size: 12px;
@@ -422,7 +428,7 @@ a {
   background: #fff;
   border: 1px solid #666666;
   color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 400;
   padding: 3px 6px;
@@ -438,12 +444,12 @@ a {
   align-items: center;
   background: rgba(0,0,0,0.235);
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0px 20px;
 }
 
 .news-heading {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,7 +501,7 @@ a {
 
 .hero h2 {
   margin-top: 12px;
-  font-family: Noto Serif Bengali;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -1050,7 +1056,9 @@ h1, h2, a {
   font-weight: 700;
 }
 
-.open-account-content-box a:hover {
+
+
+.open-account-content-box > a:hover {
   text-decoration: underline;
 }
 
@@ -1422,7 +1430,7 @@ tr:nth-child(odd) {
   font-size: 15px;
   font-weight: 700;
 }
-.complain:hover, phone-number:hover, a:hover {
+.complain:hover, phone-number:hover {
   text-decoration: underline;
 }
 
