@@ -1,7 +1,8 @@
 import './home';
 import '../styles/site-admin-list.css';
+import { API_URL } from '../../../constants';
 
-const api = process.env.API_URL;
+const api = API_URL;
 
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchData() {
