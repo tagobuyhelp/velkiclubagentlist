@@ -5,10 +5,11 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
+const { API_URL } = require('./constants.js')
 
 
-const api = process.env.API_URL;
+
+const api = API_URL;
 
 module.exports = {
     entry: {
@@ -55,9 +56,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].css',
-        }),
-        new Dotenv({
-            path: './.env',
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',

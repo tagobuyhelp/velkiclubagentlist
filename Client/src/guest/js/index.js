@@ -1,10 +1,11 @@
 import '../styles/index.css'
 import { inject } from '@vercel/analytics';
 inject();
+import { API_URL } from '../../../constants';
 
-const api = process.env.API_URL;
 
-console.log(process.env.API_URL);
+const api = API_URL;
+
 
 document.addEventListener('DOMContentLoaded', function () {
     let agentId = document.getElementById('agent-id');

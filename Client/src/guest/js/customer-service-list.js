@@ -1,8 +1,10 @@
 import './home';
 import '../styles/customer-service-list.css';
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
+import { API_URL } from '../../../constants';
 
-const api = process.env.API_URL;
+
+const api = API_URL;
 
 document.addEventListener('DOMContentLoaded', async function () {
     const tbody = document.querySelector('tbody'); // Assuming there's only one <tbody> element

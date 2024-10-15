@@ -1,6 +1,10 @@
 import '../styles/home.css';  // Import global CSS
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
 import { inject } from '@vercel/analytics';
+import { API_URL } from '../../../constants';
+
+
+const api = API_URL;
 inject();
 
 document.getElementById('header').innerHTML = require('../components/header.html').default;
@@ -152,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             try {
-                const response = await fetch(`https://server.velkiclubagentlist.com/${endPoint}/${inputAgentId}`);
+                const response = await fetch(`${api}/${endPoint}/${inputAgentId}`);
                 const result = await response.json();
 
                 if (result.success) {

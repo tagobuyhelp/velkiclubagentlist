@@ -1,13 +1,15 @@
 import './home';
 import '../styles/old-new-list.css';
+import { API_URL } from '../../../constants';
 
+const api = API_URL;
 
 document.addEventListener('DOMContentLoaded', async function () {
     const tableBody = document.querySelector('#old-new tbody');
 
     try {
         // Fetch data from the API
-        const response = await fetch('https://server.velkiclubagentlist.com/oldnew');
+        const response = await fetch(`${api}/oldnew`);
         const result = await response.json();
         console.log(result);
 

@@ -1,8 +1,9 @@
 import './home';
 import '../styles/master-agent-list.css';
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
+import { API_URL } from '../../../constants';
 
-const api = process.env.API_URL;
+const api = API_URL;
 
 document.addEventListener('DOMContentLoaded', function () {
     async function fetchSuperAgents() {
