@@ -1,4 +1,6 @@
 import '../styles/index.css'
+const { inject } = require('@vercel/analytics')
+inject();
 
 document.addEventListener('DOMContentLoaded', function () {
     let agentId = document.getElementById('agent-id');
