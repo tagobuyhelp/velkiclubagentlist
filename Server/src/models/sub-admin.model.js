@@ -18,7 +18,6 @@ const subAdminSchema = new Schema({
     },
     app: {
         type: String,
-        trim: true,
     },
     phone: {
         type: String,

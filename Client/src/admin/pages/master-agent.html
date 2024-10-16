@@ -8,16 +8,67 @@
 </head>
 
 <body>
-    <div id="header"></div> <!-- Header will be injected by JavaScript -->
+    <div class="navbar" id="nav"></div>
     <main>
-        <div class="navbar" id="navbar"></div>
-        <div class="content" id="content">
-            <p>Main content....</p>
+        <div id="header"></div>
+        <section>
+            <div class="container">
+                <div class="search-box">
+                    <div>
+                        <input type="search" name="search" id="search" placeholder="Type Agent Name / Phone Number or ID to Search">
+                    </div>
+                    <div>
+                        <button id="add-new" class="add-new">Add New Super Agent</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="table-box">
+                    <table class="agents-table">
+                        <thead>
+                            <tr>
+                                <th>ID NO</th>
+                                <th>Name</th>
+                                <th>APP</th>
+                                <th>Phone Number</th>
+                                <th>View & Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        </div>
+            <div class="agent-view-box" id="agent-view-box">
+                <div>
+                    <button id="closeAgentBox" ><span class="material-symbols-outlined">
+                        close
+                        </span></button>
+                    <div class="agent-form">
+                        <div class="inner-col-1">
+                            <p class="message" id="messageElement"></p>
+                            <select name="upline" id="upline"></select>
+                            <div class="form-group">
+                                <input type="text" id="full-name" name="full-name" placeholder="Enter full name">
+                                <input type="text" id="phone-number" name="phone-number" placeholder="Enter phone number" maxlength="13">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="app-link" name="app-link" placeholder="Enter whatsapp link">
+                            </div>
+                        </div>
+                        <div class="inner-col-2">
+                            <button type="submit" id="update-button">Update</button>
+                            <button type="button" id="delete-button">Delete</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     </main>
-    
 </body>
 
 </html>

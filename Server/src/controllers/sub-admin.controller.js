@@ -88,6 +88,8 @@ const updateSubAdmin = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { fullname, app, phone, upline } = req.body;
 
+
+
     const subAdmin = await SubAdmin.findById(id);
     if (!subAdmin) {
         throw new ApiError(404, "SubAdmin not found");

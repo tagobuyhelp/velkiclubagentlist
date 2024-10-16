@@ -91,6 +91,7 @@ const updateSuperAgent = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { fullname, app, phone, upline } = req.body;
 
+
     const superAgent = await SuperAgent.findById(id);
     if (!superAgent) {
         throw new ApiError(404, "Super Agent not found");

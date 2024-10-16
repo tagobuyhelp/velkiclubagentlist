@@ -1,5 +1,7 @@
 import '../styles/login.css';
+import { API_URL } from '../../../constants.js'
 
+const api = API_URL
 
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.getElementById("login-form");
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
             password: password
         };
 
-        fetch('https://server.lc247.info/users/login', {
+        fetch(`${api}/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
