@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const nameP = document.createElement("p");
             nameP.textContent = agent.fullname; // Assuming 'fullname' is available in the agent object
             const tag = document.createElement("span");
-            tag.textContent = "Super Agent"; // Replace with dynamic role if needed
+            tag.textContent = "Master Agent"; // Replace with dynamic role if needed
             nameP.appendChild(tag);
 
             const icon = document.createElement("i");
