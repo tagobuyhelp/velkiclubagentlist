@@ -278,26 +278,38 @@ main {
 }
 .sidebar ul li {
   padding: 0;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px dotted #2b2b2b;
   background-color: #111111;
 }
 .sidebar ul li a {
   color: #fff;
   text-decoration: none;
   display: block;
-  padding: 15px 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
 }
 .sidebar ul li a:hover {
   background-color: #444;
 }
-.sidebar ul li a.active {
-  background-color: #c00;
+
+.current {
+  background-color: #c00 !important;
+  color: #fff;
+}
+.active {
+  color: #c00 !important;
 }
 .sidebar ul li a .fa {
   margin-right: 10px;
 }
 .sidebar ul li a .new {
   color: #c00;
+}
+
+.head-menu {
+  font-weight: 700 !important;
 }
 
 .sidebar .sub-menu {

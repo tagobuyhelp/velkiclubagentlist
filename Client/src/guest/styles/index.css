@@ -177,6 +177,10 @@ a {
   text-decoration: none;
 }
 
+.content-box > p {
+  font-size: 32px;
+}
+
 
 @media (max-width: 668px) {
   body{
@@ -196,13 +200,13 @@ a {
 
   }
   .logo img {
-    height: 130px;
+    height: 120px;
     width: 100%;
   }
   nav ul li img {
-    height: 24px;
+    height: 15px;
     margin-right: 4px;
-    width: 24px;
+    width: 15px;
   }
   nav {
 
@@ -213,8 +217,8 @@ a {
     margin-top: .5px;
   }
   .title img{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
   }
   .container .title{
     gap: 5px;
@@ -254,5 +258,9 @@ a {
     padding-left: 5px;
     padding-right: 5px;
     text-align: center;
+  }
+
+  .content-box > p {
+    font-size: 17px;
   }
 }

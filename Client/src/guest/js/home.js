@@ -470,3 +470,40 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the current URL of the page
+    var currentUrl = window.location.href;
+
+    // Get all the anchor tags inside the sidebar
+    var menuItems = document.querySelectorAll('.sidebar ul li a');
+    var itemLinks = document.querySelectorAll('.item-link'); // Select elements with class 'item-link'
+
+    // Loop through each anchor tag
+    menuItems.forEach(function (menuItem) {
+        // Compare the href attribute of each anchor tag with the current URL
+        if (menuItem.href === currentUrl && !menuItem.classList.contains('item-link')) {
+            // Add 'active' class if the URL matches
+            menuItem.classList.add('active');
+
+            // Check if it's one of the dropdown submenu items
+            if (menuItem.id === 'dropdown1-sub') {
+                const dropdown1 = document.getElementById('dropdown1');
+                dropdown1.classList.add('current');
+            } else if (menuItem.id === 'dropdown2-sub') {
+                const dropdown2 = document.getElementById('dropdown2');
+                dropdown2.classList.add('current');
+            }
+        } 
+    });
+
+    // Handle links with the 'item-link' class
+    itemLinks.forEach(function (itemLink) {
+        if (itemLink.href === currentUrl) {
+            itemLink.classList.add('current');
+        }
+    });
+});
+
+

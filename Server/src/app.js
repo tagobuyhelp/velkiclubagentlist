@@ -40,7 +40,8 @@ import subAdminRouter from './routes/sub-admin.routes.js';
 import superAgentRouter from './routes/super-agent.routes.js';
 import masterAgentRouter from './routes/master-agent.routes.js';
 import customerServiceRouter from './routes/customer-service.routes.js';
-import oldNewRoutes from './routes/old-new.routes.js';
+import oldNewRouter from './routes/old-new.routes.js';
+import dashboardRouter from './routes/dashboard.routes.js';
 
 // Route declaration
 app.use("/user", userRouter);
@@ -49,6 +50,7 @@ app.use(subAdminRouter);
 app.use(superAgentRouter);
 app.use(masterAgentRouter);
 app.use(customerServiceRouter);
-app.use(oldNewRoutes);
+app.use(oldNewRouter);
+app.use(dashboardRouter)
 
 export { app };
