@@ -13,6 +13,59 @@
         <div id="header"></div>
         <section>
             <div class="container">
+                <div class="search-box">
+                    <div>
+                        <input type="search" name="search" id="search" placeholder="Type phone number or ID to Search">
+                    </div>
+                    <div>
+                        <button id="add-new" class="add-new">Add Old-New</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="table-box">
+                    <table class="agents-table">
+                        <thead>
+                            <tr>
+                                <th>OLD ID</th>
+                                <th>NEW ID</th>
+                                <th>OLD NUMBER</th>
+                                <th>NEW NUMBER</th>
+                                <th>View & Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="agent-view-box" id="agent-view-box">
+                <div>
+                    <button id="closeAgentBox" ><span class="material-symbols-outlined">
+                        close
+                        </span></button>
+                    <div class="agent-form">
+                        <div class="inner-col-1">
+                            <p class="message" id="messageElement"></p>
+                            <div class="form-group">
+                                <input type="text" id="old-id" name="old-id" placeholder="Enter old id">
+                                <input type="text" id="new-id" name="new-id" placeholder="Enter new id">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="old-number" name="old-number" placeholder="Enter old number" maxlength="13">
+                                <input type="text" id="new-number" name="new-number" placeholder="Enter new number" maxlength="13">
+                            </div>
+                        </div>
+                        <div class="inner-col-2">
+                            <button type="submit" id="update-button">Update</button>
+                            <button type="button" id="delete-button">Delete</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </main>

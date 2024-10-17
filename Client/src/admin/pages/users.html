@@ -13,6 +13,56 @@
         <div id="header"></div>
         <section>
             <div class="container">
+                <div class="search-box">
+                    <div>
+                        <input type="search" name="search" id="search" placeholder="Type User Name / email to Search">
+                    </div>
+                    <div>
+                        <button id="add-new" class="add-new">Add New User</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="table-box">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>View & Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="agent-view-box" id="agent-view-box">
+                <div>
+                    <button id="closeAgentBox" ><span class="material-symbols-outlined">
+                        close
+                        </span></button>
+                    <div class="agent-form">
+                        <div class="inner-col-1">
+                            <p class="message" id="messageElement"></p>
+                            <div class="form-group">
+                                <input type="text" id="full-name" name="full-name" placeholder="Enter full name">
+                                <input type="email" id="email" name="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group form-group-2">
+                                <input type="password" id="new-password" name="new-password" placeholder="Enter new password" maxlength="13">
+                            </div>
+                        </div>
+                        <div class="inner-col-2">
+                            <button type="submit" id="update-button">Update</button>
+                            <button type="button" id="delete-button">Delete</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </main>
