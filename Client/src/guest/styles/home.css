@@ -247,6 +247,22 @@ main {
   display: none;
 }
 
+.mobile-menu {
+  background-color: black;
+}
+
+#openMenu {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+#openMenu:hover {
+  background-color: #cc0000;
+  color: white;
+  cursor: pointer;
+}
+
 .sidebar {
   display: none;
   width: 250px;
@@ -1469,22 +1485,36 @@ tr:nth-child(odd) {
     justify-content: space-between;
     align-items: center;
     height: 53px;
-    padding-left: 10px;
     padding-right: 10px;
     border-bottom: solid 3px #cc0000;
-  }
+    position: fixed; /* Make it fixed at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 999; /* Ensure it stays on top of other elements */
+    background-color: #fff; /* Add a background color to prevent content from overlapping */
+}
+
+main {
+  margin-top: 53px;
+}
 
   .mobile-logo {
-    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    box-sizing: border-box;
   }
   .mobile-logo img {
-    width: 80px;
-    height: 26.28px;
-    margin-left: -90px;
+    width: 140px;
+    height: 46px;
+    box-sizing: border-box;
+    
   }
   .customer-service a {
     text-decoration: none;
     color: #cc0000;
+    font-weight: 500;
   }
   #openMenu {
     background-color: white;
@@ -1493,10 +1523,10 @@ tr:nth-child(odd) {
 
   .mobile-menu {
     display: flex;
+    flex-direction: row;
+    width: 11%;
     align-items: center;
     justify-content: center;
-    padding-right: 15px;
-    padding-left: 5px;
     border-right: solid 1px #e0e0e0;
     height: 100%;
     box-sizing: border-box;
@@ -1543,7 +1573,8 @@ tr:nth-child(odd) {
   }
 
   .hero h1 {
-    font-size: 18px;;
+    font-size: 30px;
+    font-weight: 700;
   }
   .hero h2 {
     font-size: 18px;
