@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 grandUplines.forEach(grandUpline => {
                     const uplines = grandUpline.superAgents;
-                    const grandUplineId = grandUpline.id;
+                    const grandUplineId = grandUpline.fullname;
 
                     uplines.forEach(upline => {
                         const masterAgents = upline.masterAgents;
-                        const uplineId = upline.superAgent.id;
-                        const grandUplineId = upline.superAgent.upline.id
+                        const uplineId = upline.superAgent.fullname;
+                        const grandUplineId = upline.superAgent.upline.fullname
                         const totalDownLineCount = upline.masterAgentCount;
 
                         const tableBox = document.getElementById('table-box');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const phoneNumberTd = document.createElement('td');
                             const complainTd = document.createElement('td');
                         
-                            idTd.innerHTML = masterAgent.id;
+                            idTd.innerHTML = masterAgent.fullname;
                             agentTd.innerHTML = 'মাষ্টার';
                         
                             // WhatsApp Link and Image
@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Set up the content layout using innerHTML
                     const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন মাষ্টার এজেন্ট নাম্বার ${masterAgent.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন মাষ্টার এজেন্ট নাম্বার ${masterAgent.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার মাষ্টার এজেন্ট আইডিঃ </td>
-                                    <td class="agent-id">${masterAgent.id}</td>
+                                    <td class="agent-id">${masterAgent.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সুপার এজেন্ট এর এজেন্ট আইডিঃ</td>
-                                    <td class="upline-name">${superUpline.id}</td>
+                                    <td class="upline-name">${superUpline.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সুপার এজেন্ট এর হোয়াটসঅ্যাপ নাম্বারঃ</td>
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর এডমিন আইডিঃ</td>
-                                    <td class="upline-name">${subAdminUpline.id}</td>
+                                    <td class="upline-name">${subAdminUpline.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর হোয়াটসঅ্যাপ নাম্বারঃ</td>

@@ -6,7 +6,7 @@ import errorMiddleware from './middleware/error.middleware.js';
 const app = express();
 
 // CORS configuration
-const allowedOrigins = ['https://velkiclubagent.com', 'https://velkiclubagentlist.com', 'http://localhost:9000'];
+const allowedOrigins = ['https://velkiclubagent.com', 'https://velkiclubagentlist.com', 'http://localhost:9000', 'https://allaglist.com', 'https://www.allaglist.com', 'https://velkiallaglist.com', 'https://www.velkiallaglist.com'];
 
 const corsOptions = {
     origin: function (origin, callback) {
