@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     const row = document.createElement('tr');
 
                     const idCell = document.createElement('td');
-                    idCell.textContent = subAdmin.id;
+                    idCell.textContent = subAdmin.fullname;
                     row.appendChild(idCell);
 
                     const agentCell = document.createElement('td');
-                    agentCell.textContent = subAdmin.fullname;
+                    agentCell.textContent = 'সাব এডমিন';
                     row.appendChild(agentCell);
 
                     const appCell = document.createElement('td');
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Set up the content layout using innerHTML
                     const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেক্টর একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেক্টর একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সাব এডমিন আইডি:</td>
-                                    <td class="agent-id">${subAdminData.id}</td>
+                                    <td class="agent-id">${subAdminData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>

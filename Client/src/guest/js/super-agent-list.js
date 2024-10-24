@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 uplines.forEach(upline => {
                     const superAgents = upline.superAgents;
-                    const uplineId = upline.upline.id;
+                    const uplineId = upline.upline.fullname;
                     const totalDownLineCount = upline.downlineCount;
 
                     const tableBox = document.getElementById('table-box');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const phoneNumberTd = document.createElement('td');
                         const complainTd = document.createElement('td');
 
-                        idTd.innerHTML = superAgent.id;
+                        idTd.innerHTML = superAgent.fullname;
                         agentTd.innerHTML = 'সুপার';
 
                         // Create WhatsApp link and icon for the App column
@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Set up the content layout using innerHTML
                     const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন সুপার এজেন্ট নাম্বার ${subAdminData.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন সুপার এজেন্ট নাম্বার ${subAdminData.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সুপার এজেন্ট আইডি:</td>
-                                    <td class="agent-id">${subAdminData.id}</td>
+                                    <td class="agent-id">${subAdminData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <table class="info-table">
                                 <tr>
                                     <td>উনার এডমিন এর এডমিন আইডি:</td>
-                                    <td class="upline-name">${uplineData.id}</td>
+                                    <td class="upline-name">${uplineData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর হোয়াটসঅ্যাপ নাম্বারঃ:</td>
