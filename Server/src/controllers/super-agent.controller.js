@@ -56,11 +56,18 @@ const getSuperAgentById = asyncHandler(async (req, res) => {
 // Get all Uplines (SubAdmins) with their Downlines (SuperAgents)
 const getAllUplinesWithSuperAgents = asyncHandler(async (req, res) => {
     try {
-        const uplines = await SubAdmin.find();
+        // Retrieve SubAdmins (uplines) in random order
+        const uplines = await SubAdmin.aggregate([{ $sample: { size: await SubAdmin.countDocuments() } }]);
 
         const results = await Promise.all(
             uplines.map(async (upline) => {
-                const superAgents = await SuperAgent.find({ upline: upline._id }).populate('upline');
+                // Retrieve SuperAgents in random order and populate 'upline' field
+                const superAgents = await SuperAgent.aggregate([
+                    { $match: { upline: upline._id } },
+                    { $sample: { size: await SuperAgent.countDocuments({ upline: upline._id }) } }
+                ]);
+
+                await SuperAgent.populate(superAgents, { path: 'upline' });
                 const downlineCount = superAgents.length;
 
                 // Only return the upline if there are associated super agents

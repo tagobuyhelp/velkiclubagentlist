@@ -99,18 +99,30 @@ const deleteMasterAgent = asyncHandler(async (req, res) => {
 // Get all Uplines (SubAdmins) with their SuperAgents and MasterAgents
 const getAllUplinesWithSuperAgentsAndMasterAgents = asyncHandler(async (req, res) => {
     try {
-        // Find all SubAdmins (Uplines)
-        const uplines = await SubAdmin.find();
+        // Get SubAdmins (Uplines) in random order with full data
+        const uplines = await SubAdmin.aggregate([{ $sample: { size: await SubAdmin.countDocuments() } }]);
 
         // For each upline, find its associated SuperAgents and their MasterAgents
         const results = await Promise.all(
             uplines.map(async (upline) => {
-                const superAgents = await SuperAgent.find({ upline: upline._id }).populate('upline');
+                // Get SuperAgents in random order and populate the upline field
+                const superAgents = await SuperAgent.aggregate([
+                    { $match: { upline: upline._id } },
+                    { $sample: { size: await SuperAgent.countDocuments({ upline: upline._id }) } }
+                ]);
+
+                // Populate the upline field for each superAgent
+                await SuperAgent.populate(superAgents, { path: 'upline' });
 
                 const superAgentData = await Promise.all(
                     superAgents.map(async (superAgent) => {
-                        const masterAgents = await MasterAgent.find({ upline: superAgent._id });
-                        const masterAgentCount = masterAgents.length; // Count of MasterAgents
+                        // Get MasterAgents with random ordering using $sample
+                        const masterAgents = await MasterAgent.aggregate([
+                            { $match: { upline: superAgent._id } },
+                            { $sample: { size: await MasterAgent.countDocuments({ upline: superAgent._id }) } }
+                        ]);
+
+                        const masterAgentCount = masterAgents.length;
 
                         // Only return the superAgent data if there are associated master agents
                         return masterAgentCount > 0 ? {
@@ -123,7 +135,7 @@ const getAllUplinesWithSuperAgentsAndMasterAgents = asyncHandler(async (req, res
 
                 // Filter out null values (superAgents without master agents)
                 const filteredSuperAgents = superAgentData.filter(agent => agent !== null);
-                const superAgentCount = filteredSuperAgents.length; // Count of SuperAgents with MasterAgents
+                const superAgentCount = filteredSuperAgents.length;
 
                 // Only return the upline if there are associated super agents
                 return superAgentCount > 0 ? {
@@ -147,6 +159,8 @@ const getAllUplinesWithSuperAgentsAndMasterAgents = asyncHandler(async (req, res
         );
     }
 });
+
+
 
 //get random master agent 
 const randomMasterAgent = asyncHandler(async (req, res) => {

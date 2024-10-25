@@ -50,13 +50,19 @@ const getSubAdminById = asyncHandler(async (req, res) => {
 // Get all Uplines (SiteAdmins) with their Downlines (SubAdmins), skipping uplines with no downlines
 const getAllUplinesWithSubAdmins = asyncHandler(async (req, res) => {
     try {
-        // Find all SiteAdmins (Uplines)
-        const uplines = await SiteAdmin.find();
+        // Retrieve SiteAdmins (uplines) in random order
+        const uplines = await SiteAdmin.aggregate([{ $sample: { size: await SiteAdmin.countDocuments() } }]);
 
-        // For each upline, find its associated SubAdmins (Downlines) and count them
         const results = await Promise.all(
             uplines.map(async (upline) => {
-                const subAdmins = await SubAdmin.find({ upline: upline._id }).populate('upline');
+                // Retrieve SubAdmins (downlines) in random order and populate 'upline' field
+                const subAdmins = await SubAdmin.aggregate([
+                    { $match: { upline: upline._id } },
+                    { $sample: { size: await SubAdmin.countDocuments({ upline: upline._id }) } }
+                ]);
+
+                await SubAdmin.populate(subAdmins, { path: 'upline' });
+                
                 return {
                     upline,
                     subAdmins,
@@ -73,7 +79,6 @@ const getAllUplinesWithSubAdmins = asyncHandler(async (req, res) => {
             new ApiResponse(200, filteredResults, "Uplines with downlines retrieved successfully")
         );
     } catch (error) {
-        // In case of any error, respond with 500 status
         return res.status(500).json(
             new ApiResponse(500, null, "An error occurred while retrieving uplines")
         );
