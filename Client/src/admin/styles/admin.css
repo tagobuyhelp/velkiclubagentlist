@@ -119,7 +119,7 @@ main {
     flex-direction: column;
     background-color: #30323c;
     width: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     gap: 15px;
     box-sizing: border-box;
 }
@@ -392,6 +392,11 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     overflow-x: auto;
+}
+
+tbody {
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 table {
