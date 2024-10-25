@@ -63,7 +63,7 @@ module.exports = {
             chunks: ['global'],
         }),
         new HtmlWebpackPlugin({
-            filename: 'customer-service-list',
+            filename: 'customer-service-list.html',
             template: './src/guest/pages/customer-service-list.html',
             chunks: ['global', 'customer-service-list'],
         }),
