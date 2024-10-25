@@ -1,4 +1,4 @@
-import './home';
+import './index';
 import '../styles/site-admin-list.css';
 import { API_URL } from '../../../constants';
 

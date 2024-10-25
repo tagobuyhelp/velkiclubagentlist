@@ -1,4 +1,4 @@
-import './home';
+import './index';
 import '../styles/master-agent-list.css';
 import halalWhatsapp from '/public/images/halal-whatsapp.png';
 import { API_URL } from '../../../constants';

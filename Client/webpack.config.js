@@ -13,7 +13,7 @@ const api = API_URL;
 
 module.exports = {
     entry: {
-        global: './src/guest/js/home.js',
+        global: './src/guest/js/index.js',
         adminglobal: './src/admin/js/index.js',
         'index': './src/guest/js/index.js',
         'customer-service-list': './src/guest/js/customer-service-list.js',
@@ -60,12 +60,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/guest/pages/index.html',
-            chunks: ['index'],
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'home.html',
-            template: './src/guest/pages/home.html',
-            chunks: ['global']
+            chunks: ['global'],
         }),
         new HtmlWebpackPlugin({
             filename: 'customer-service-list.html',

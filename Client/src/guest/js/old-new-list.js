@@ -1,4 +1,4 @@
-import './home';
+import './index';
 import '../styles/old-new-list.css';
 import { API_URL } from '../../../constants';
 
