@@ -1590,11 +1590,14 @@ main {
     text-align: center;
   }
   .featured-image {
-    display: block;
-    width: 100%;
-    max-width: 100%;
     padding: 0px;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .grid-list {
