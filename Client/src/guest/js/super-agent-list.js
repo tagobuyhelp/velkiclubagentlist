@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Complain button with class 'complain'
                         const complainButton = document.createElement('button');
                         complainButton.className = 'complain';
-                        complainButton.id = superAgent.id; // Use super agent ID for the button
+                        complainButton.id = superAgent.fullname; // Use super agent ID for the button
                         complainButton.innerHTML = 'অভিযোগ';
                         complainTd.appendChild(complainButton);
 

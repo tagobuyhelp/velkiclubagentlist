@@ -37,7 +37,7 @@ const getAllSubAdmins = asyncHandler(async (req, res) => {
 const getSubAdminById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const subAdmin = await SubAdmin.findOne({id}).populate('upline');
+    const subAdmin = await SubAdmin.findOne({fullname: id}).populate('upline');
     if (!subAdmin) {
         throw new ApiError(404, "Sub Admin not found");
     }

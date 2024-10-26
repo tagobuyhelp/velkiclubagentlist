@@ -1682,4 +1682,9 @@ main {
   .table-title {
     font-size: 21px;
   }
+
+  .phone-number-search-form {
+    box-sizing: border-box;
+    width: 370px;
+  }
 }

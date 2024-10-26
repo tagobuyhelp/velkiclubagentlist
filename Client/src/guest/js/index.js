@@ -173,11 +173,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Set up the content layout using innerHTML
                         const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেক্টর একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেক্টর একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সাব এডমিন আইডি:</td>
-                                    <td class="agent-id">${subAdminData.id}</td>
+                                    <td class="agent-id">${subAdminData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>
@@ -252,11 +252,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Set up the content layout using innerHTML
                         const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন সুপার এজেন্ট নাম্বার ${subAdminData.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন সুপার এজেন্ট নাম্বার ${subAdminData.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সুপার এজেন্ট আইডি:</td>
-                                    <td class="agent-id">${subAdminData.id}</td>
+                                    <td class="agent-id">${subAdminData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <table class="info-table">
                                 <tr>
                                     <td>উনার এডমিন এর এডমিন আইডি:</td>
-                                    <td class="upline-name">${uplineData.id}</td>
+                                    <td class="upline-name">${uplineData.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর হোয়াটসঅ্যাপ নাম্বারঃ:</td>
@@ -353,11 +353,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Set up the content layout using innerHTML
                         const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন মাষ্টার এজেন্ট নাম্বার ${masterAgent.id}</h1></div>
+                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন মাষ্টার এজেন্ট নাম্বার ${masterAgent.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার মাষ্টার এজেন্ট আইডিঃ </td>
-                                    <td class="agent-id">${masterAgent.id}</td>
+                                    <td class="agent-id">${masterAgent.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার হোয়াটসঅ্যাপ নাম্বার:</td>
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সুপার এজেন্ট এর এজেন্ট আইডিঃ</td>
-                                    <td class="upline-name">${superUpline.id}</td>
+                                    <td class="upline-name">${superUpline.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সুপার এজেন্ট এর হোয়াটসঅ্যাপ নাম্বারঃ</td>
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর এডমিন আইডিঃ</td>
-                                    <td class="upline-name">${subAdminUpline.id}</td>
+                                    <td class="upline-name">${subAdminUpline.fullname}</td>
                                 </tr>
                                 <tr>
                                     <td>উনার সাব এডমিন এর হোয়াটসঅ্যাপ নাম্বারঃ</td>

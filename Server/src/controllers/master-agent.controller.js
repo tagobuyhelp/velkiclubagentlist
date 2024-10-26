@@ -40,7 +40,7 @@ const getAllMasterAgents = asyncHandler(async (req, res) => {
 const getMasterAgentById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const masterAgent = await MasterAgent.findOne({id}).populate('upline');
+    const masterAgent = await MasterAgent.findOne({fullname: id}).populate('upline');
     if (!masterAgent) {
         throw new ApiError(404, "MasterAgent not found");
     }

@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const complainCell = document.createElement('td');
                     const complainBtn = document.createElement('button');
                     complainBtn.textContent = 'অভিযোগ';
-                    complainBtn.value = subAdmin.id;
-                    complainBtn.id = subAdmin.id;
+                    complainBtn.value = subAdmin.fullname;
+                    complainBtn.id = subAdmin.fullname;
                     complainBtn.className = 'complain'
 
 

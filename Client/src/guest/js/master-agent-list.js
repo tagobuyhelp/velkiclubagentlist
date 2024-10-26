@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             // Complain Button
                             const complainButton = document.createElement('button');
                             complainButton.className = 'complain';
-                            complainButton.id = masterAgent.id;
+                            complainButton.id = masterAgent.fullname;
                             complainButton.innerHTML = 'অভিযোগ';
                             complainTd.appendChild(complainButton);
                         

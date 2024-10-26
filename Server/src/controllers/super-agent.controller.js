@@ -39,7 +39,7 @@ const getAllSuperAgents = asyncHandler(async (req, res) => {
 const getSuperAgentById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const superAgent = await SuperAgent.findOne({id}).populate('upline');
+    const superAgent = await SuperAgent.findOne({fullname: id}).populate('upline');
     const subAdminId = superAgent.upline._id;
     const subAdminUpline = await SubAdmin.findById(subAdminId).populate('upline');
     const siteAdminId = subAdminUpline.upline._id;
