@@ -1524,6 +1524,7 @@ main {
   margin-top: -5px;
   width: 40%;
   align-items: flex-end; /* Align at the bottom */
+  justify-content: end;
 }
 
   .customer-service .csl {
