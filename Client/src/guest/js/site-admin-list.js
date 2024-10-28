@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data.forEach(item => {
                     const row = document.createElement('tr');
 
-                    const idCell = document.createElement('td');
-                    idCell.textContent = item.id;
-                    row.appendChild(idCell);
+                    
 
                     const nameCell = document.createElement('td');
                     nameCell.textContent = item.fullname;
