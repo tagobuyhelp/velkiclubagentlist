@@ -1582,9 +1582,10 @@ main {
   }
 
   
-  .div-right {
-    width: 100%;
-  }
+
+  .proxy .div-right {
+    width: 100% !important;
+}
 
   .grid {
     flex-direction: column;
