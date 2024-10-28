@@ -1493,44 +1493,41 @@ tr:nth-child(odd) {
   }
   .mobile-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Distribute space evenly */
     height: 53px;
     border-bottom: solid 3px #cc0000;
-    position: fixed; /* Make it fixed at the top */
-    top: 0; /* Position it at the top */
-    left: 0; /* Align it to the left */
-    right: 0; /* Align it to the right */
-    z-index: 999; /* Ensure it stays on top of other elements */
-    background-color: #fff; /* Add a background color to prevent content from overlapping */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 main {
   margin-top: 53px;
 }
 
-  .mobile-logo {
-    display: flex;
-    flex-direction: row;
-    width: 63%;
-    box-sizing: border-box;
-  }
-  .mobile-logo img {
-    box-sizing: border-box;
-    height: 30px;
-    width: 90px;
-    margin-left: 10px;
+.mobile-logo img {
+  height: 30px;
+  width: 90px;
+  margin-left: 10px;
+  box-sizing: border-box;
 }
-  .customer-service {
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-    margin-top: -5px;
-    width: 26%;
-    align-items: end;
-  }
+
+.customer-service {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: -5px;
+  width: 40%;
+  align-items: flex-end; /* Align at the bottom */
+}
 
   .customer-service .csl {
+    box-sizing: border-box;
     text-decoration: none;
     color: #cc0000;
     font-weight: 500;
