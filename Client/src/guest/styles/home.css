@@ -1512,7 +1512,7 @@ main {
   .mobile-logo {
     display: flex;
     flex-direction: row;
-    width: 54%;
+    width: 50%;
     box-sizing: border-box;
   }
   .mobile-logo img {
@@ -1522,10 +1522,12 @@ main {
     margin-left: 10px;
 }
   .customer-service {
+    display: flex;
     padding: 0px;
     margin: 0px;
     margin-top: -5px;
-    width: 35%;
+    width: 26%;
+    align-items: end;
   }
 
   .customer-service .csl {
@@ -1533,7 +1535,7 @@ main {
     color: #cc0000;
     font-weight: 500;
     font-size: 14px;
-    padding: 17px 10px;
+    padding: 17px 15px;
     margin-bottom: 5px;
   }
   .customer-service-button-active {
