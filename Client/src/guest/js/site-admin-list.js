@@ -1,6 +1,7 @@
 import './index';
 import '../styles/site-admin-list.css';
 import { API_URL } from '../../../constants';
+import halalWhatsapp from '/public/images/halal-whatsapp.png';
 
 const api = API_URL;
 
@@ -28,7 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     row.appendChild(telegramCell);
 
                     const whatsappCell = document.createElement('td');
-                    whatsappCell.innerHTML = `<a href="${item.whatsapp}" target="_blank"><i class="fab fa-whatsapp icon-whatsapp"></i></a>`;
+                    const appLink = document.createElement('a');
+                    appLink.href = item.whatsapp;
+                    const appImage = document.createElement('img');
+                    appImage.src = halalWhatsapp;
+                    appImage.alt = 'WhatsApp';
+                    appImage.style.width = '24px';
+                    appImage.style.height = '24px';
+                    appLink.appendChild(appImage);
+                    whatsappCell.appendChild(appLink)
+
                     row.appendChild(whatsappCell);
 
                     const phoneCell = document.createElement('td');
