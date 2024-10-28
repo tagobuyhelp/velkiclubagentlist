@@ -1512,7 +1512,7 @@ main {
   .mobile-logo {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 63%;
     box-sizing: border-box;
   }
   .mobile-logo img {
