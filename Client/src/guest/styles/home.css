@@ -1510,10 +1510,16 @@ main {
   margin-top: 53px;
 }
 
+.mobile-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .mobile-logo img {
   height: 30px;
   width: 90px;
-  margin-left: 10px;
+  margin-left: -60px;
   box-sizing: border-box;
 }
 
