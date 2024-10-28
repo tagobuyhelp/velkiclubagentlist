@@ -504,6 +504,16 @@ document.addEventListener("DOMContentLoaded", function () {
             itemLink.classList.add('current');
         }
     });
+
+    console.log(currentUrl);
+
+    const csl = document.querySelector('.csl');
+
+    if (csl.href === currentUrl) {
+        console.log('I am visited in customer service page');
+        csl.classList.add('customer-service-button-active')
+    }
+
 });
 
 
