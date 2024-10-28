@@ -1496,7 +1496,6 @@ tr:nth-child(odd) {
     justify-content: space-between;
     align-items: center;
     height: 53px;
-    padding-right: 10px;
     border-bottom: solid 3px #cc0000;
     position: fixed; /* Make it fixed at the top */
     top: 0; /* Position it at the top */
@@ -1522,11 +1521,25 @@ main {
     box-sizing: border-box;
     
   }
-  .customer-service a {
+  .customer-service {
+    padding: 0px;
+    margin: 0px;
+    margin-top: -5px;
+  }
+
+  .customer-service .csl {
     text-decoration: none;
     color: #cc0000;
     font-weight: 500;
+    font-size: 14px;
+    padding: 17px 12px;
+    margin-bottom: 5px;
   }
+  .customer-service-button-active {
+    background-color: #cc0000 !important;
+    color: white !important;;
+  }
+
   #openMenu {
     background-color: white;
     border: solid 0px;
