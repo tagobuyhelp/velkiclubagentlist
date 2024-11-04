@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Set up the content layout using innerHTML
                         const subAdminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>উনি ভেক্টর একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.fullname}</h1></div>
+                            <div class="section-title"><h1>উনি ভেল্কির একজন অনলাইন সাব এডমিন নাম্বার ${subAdminData.fullname}</h1></div>
                             <table class="info-table">
                                 <tr>
                                     <td>উনার সাব এডমিন আইডি:</td>
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         const adminSection = `
                         <div class="section">
-                            <div class="section-title"><h1>এই ভেক্টর অনলাইন সাব এডমিন এর আপলাইনের তথ্য:</h1></div>
+                            <div class="section-title"><h1>এই ভেল্কির অনলাইন সাব এডমিন এর আপলাইনের তথ্য:</h1></div>
                             <p class="upline-p">উপরের সাব এডমিন এর বিরুদ্ধে অভিযোগ করতে হলে নিচের যে কোন নাম্বার এ হোয়াটসঅ্যাপ এ মেসেজ দিতে হবে</p>
                             <table class="info-table">
                                 <tr>
