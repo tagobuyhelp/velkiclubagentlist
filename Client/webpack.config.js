@@ -31,6 +31,7 @@ module.exports = {
         'old-new': './src/admin/js/old-new.js',
         'users': './src/admin/js/users.js',
         'login': './src/admin/auth/login.js',
+        'phone-number-search': './src/guest/js/phone-number-search.js',
     },
     output: {
         filename: '[name].bundle.js',
@@ -160,7 +161,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'phone-number-search.html',
             template: './src/guest/pages/phone-number-search.html',
-            chunks: ['global']
+            chunks: ['global', 'phone-number-search']
         }),
         new HtmlWebpackPlugin({
             filename: 'velki-quick-master-agent.html',

@@ -9,14 +9,21 @@
 
 <body>
     <div id="header"></div> <!-- Header will be injected by JavaScript -->
-    <main>
-        <div class="phone-number-search-box">
-            <h1>ফোন নাম্বার দিয়ে সার্চ করুন:</h1>
+    <main style="display: block; padding: 0% !important;">
+        <div class="phone-number-search-box" style="align-items: center;">
+            <h1 >ফোন নাম্বার দিয়ে সার্চ করুন:</h1>
             <div class="phone-number-search-form">
-                <label for="phone-number">Phone Number:</label>
-                <input type="text" id="phone-number" name="phone-number" style="text-align: center;">
-                <button type="submit">Submit</button>
+                <form id="search-by-phone">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="text" id="phone-number" name="phone-number" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </form>
             </div>
+        </div>
+        <div><h1 class="message"></h1></div>
+        <div id="table-box" style="margin-left: 10px; margin-right: 10px;">
+            <h1 id="table-title" style="text-align: center; font-size: 21px;"></h1>
+            <table id="agent-table"></table>
         </div>
         <div style="height: 300px;">
 

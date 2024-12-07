@@ -8,6 +8,7 @@ import {
     deleteMasterAgent,
     getAllUplinesWithSuperAgentsAndMasterAgents,
     randomMasterAgent,
+    agentByPhone,
 } from '../controllers/master-agent.controller.js';
 
 const router = Router();
@@ -17,6 +18,7 @@ router.get('/masteragent', getAllMasterAgents);
 router.get('/masteragent/uplines', getAllUplinesWithSuperAgentsAndMasterAgents);
 router.get('/masteragent/:id', getMasterAgentById);
 router.get('/randommasteragent', randomMasterAgent);
+router.get('/agent-by-phone/:phone', agentByPhone);
 router.put('/masteragent/:id', verifyJWT, updateMasterAgent);
 router.delete('/masteragent/:id', verifyJWT, deleteMasterAgent);
 

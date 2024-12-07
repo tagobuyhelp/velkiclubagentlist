@@ -176,6 +176,34 @@ const randomMasterAgent = asyncHandler(async (req, res) => {
 });
 
 
+// Get Any Type By Phone Number
+const agentByPhone = asyncHandler(async (req, res) => {
+    const { phone } = req.params;
+
+    if (!phone) {
+        throw new ApiError(400, "Phone number is required");
+    }
+
+    const masteragent = await MasterAgent.findOne({ phone });
+    if (masteragent) {
+        return res.status(200).json({ agent: masteragent, message: "Master Agent found", type: "masteragent" });
+    }
+
+    const superagent = await SuperAgent.findOne({ phone });
+    if (superagent) {
+        return res.status(200).json({ agent: superagent, message: "Super Agent found", type: "superagent" });
+    }
+
+    const subadmin = await SubAdmin.findOne({ phone });
+    if (subadmin) {
+        return res.status(200).json({ agent: subadmin, message: "Sub Admin found", type: "subadmin" });
+    }
+
+    // If no agent is found
+    throw new ApiError(404, "No agent found with the provided phone number");
+});
+
+
 
 export {
     createMasterAgent,
@@ -185,4 +213,5 @@ export {
     deleteMasterAgent,
     getAllUplinesWithSuperAgentsAndMasterAgents,
     randomMasterAgent,
+    agentByPhone,
 };
